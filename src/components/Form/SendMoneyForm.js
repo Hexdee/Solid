@@ -14,7 +14,7 @@ const SendMoneyForm = () => {
             fontWeight="bold"
             focusBorderColor="white"
             focusColor="white"
-            w="50%"
+            w={{ base: "80%", lg: "50%"}}
             h="80px"
             border="none"
             fontSize="60px"

@@ -18,7 +18,7 @@ const SetRecoveryMethodTemp = ({ handleContinue }) => {
           boxShadow="rgba(0, 0, 0, 0.05) 0px 0px 0px 1px"
           borderRadius="8px"
         >
-          <Text fontSize="34px" fontWeight="bold">
+          <Text fontSize={{ base: "25", lg: "34px"}} fontWeight="bold">
             Choose a Security Method
           </Text>
           <Divider />

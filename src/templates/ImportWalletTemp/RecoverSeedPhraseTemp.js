@@ -23,7 +23,7 @@ const RecoverSeedPhraseTemp = () => {
             boxShadow="rgba(0, 0, 0, 0.05) 0px 0px 0px 1px"
             borderRadius="8px"
           >
-            <Text fontSize="34px" fontWeight="bold">
+            <Text fontSize={{ base: "25px", lg: "34px" }} fontWeight="bold">
               Import using Passphrase
             </Text>
             <Divider />

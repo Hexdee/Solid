@@ -12,7 +12,7 @@ const ReceiveMoneyTemp = () => {
         <AuthNavBar>
         <Box w="100%">
           <Box
-            w="40%"
+            w={{ base: "80%", lg: "40%" }}
             mx="auto"
             my="30px"
             p="20px"
