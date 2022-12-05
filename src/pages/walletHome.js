@@ -1,5 +1,5 @@
 import { toaster } from "evergreen-ui";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import LoginTemp from "../templates/LoginTemp";
 import WalletTemp from "../templates/WalletTemp";
 import ReceiveMoneyTemp from "../templates/WalletTemp/ReceiveMoneyTemp";
@@ -12,9 +12,6 @@ const WalletHome = () => {
     const [signer, setSigner] = useState();
     const [isSendingMoney, setIsSendingMoney] = useState(false);
     const [isReceivingMoney, setIsReceivingMoney] = useState(false);
-    useEffect(() => {
-        localStorage.removeItem('new_sign_in');
-    }, []);
 
     const handleLogin = async (password) => {
         setIsLoading(true);

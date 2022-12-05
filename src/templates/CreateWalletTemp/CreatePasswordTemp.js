@@ -7,7 +7,7 @@ import PasswordInput from "../../components/TextInputs/PasswordInput";
 import { PasswordValidate } from "../../utils.js/helpers";
 import { toaster } from "evergreen-ui";
 
-const CreatePasswordTemp = ({ createWallet, isCreatingAcct }) => {
+const CreatePasswordTemp = ({ createWallet }) => {
   const navigate = useNavigate();
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -26,10 +26,10 @@ const CreatePasswordTemp = ({ createWallet, isCreatingAcct }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     createWallet(password);
-    if (isCreatingAcct === false) {
-      toaster.success("Wallet Created Successfully !", { id: "mess", duration: 2 });
+    toaster.success("Wallet Created Successfully !", { id: "mess", duration: 2 });
+    setTimeout(() => {
       navigate('/');
-    }
+    }, 2000);
   }
 
   return (
@@ -68,7 +68,6 @@ const CreatePasswordTemp = ({ createWallet, isCreatingAcct }) => {
                 hoverColor="black"
                 testid="on-close"
                 mt="40px"
-                isLoading={isCreatingAcct}
                 disabled={!isPasswordValidating || !isConfirmValidating}
               >
                 Create Password
